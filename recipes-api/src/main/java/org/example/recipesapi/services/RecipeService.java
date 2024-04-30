@@ -1,7 +1,6 @@
 package org.example.recipesapi.services;
 
 import lombok.AllArgsConstructor;
-import org.example.recipesapi.converters.RecipeConverter;
 import org.example.recipesapi.dto.RecipeDTO;
 import org.example.recipesapi.entities.Ingredient;
 import org.example.recipesapi.entities.Recipe;
@@ -35,6 +34,10 @@ public class RecipeService {
     }
 
     public Recipe createRecipeFromExistingIngredients(RecipeDTO recipeDTO, List<Long> ingredientIds) {
+        Recipe recipe = new Recipe();
+        recipe.setTitle(recipeDTO.getTitle());
+        recipe.setDescription(recipeDTO.getDescription());
+        recipe.setDifficulty(recipeDTO.getDifficulty());
         Set<Ingredient> ingredients = new HashSet<>();
         for (Long ingredientId : ingredientIds) {
             Optional<Ingredient> optionalIngredient = ingredientRepository.findById(ingredientId);
@@ -43,7 +46,6 @@ public class RecipeService {
             }
             ingredients.add(optionalIngredient.get());
         }
-        Recipe recipe = RecipeConverter.convertDTOToRecipe(recipeDTO);
         recipe.setIngredients(ingredients);
         return recipeRepository.saveAndFlush(recipe);
     }
