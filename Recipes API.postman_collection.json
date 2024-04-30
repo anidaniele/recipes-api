@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "c5efa294-9201-48ae-bbc3-3b58403748a4",
+		"name": "Recipes API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34350697"
+	},
+	"item": [
+		{
+			"name": "Recipes",
+			"item": [
+				{
+					"name": "get all recipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/recipes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all recipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/recipes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"recipes"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"title\": \"Spaghetti Bolognese\",\r\n        \"difficulty\": 3,\r\n        \"description\": \"Classic spaghetti with tomato sauce\",\r\n        \"ingredients\": [\r\n            {\r\n                \"name\": \"Tomato\",\r\n                \"category\": \"Produce\",\r\n                \"recipes\": null\r\n            },\r\n            {\r\n                \"name\": \"Onion\",\r\n                \"category\": \"Produce\",\r\n                \"recipes\": null\r\n            },\r\n            {\r\n                \"name\": \"Milk\",\r\n                \"category\": \"Dairy\",\r\n                \"recipes\": null\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"title\": \"Grilled Cheese\",\r\n        \"difficulty\": 2,\r\n        \"description\": \"Simple and delicious grilled cheese sandwich\",\r\n        \"ingredients\": [\r\n            {\r\n                \"name\": \"Cheese\",\r\n                \"category\": \"Dairy\",\r\n                \"recipes\": null\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"title\": \"Grilled Chicken Breast\",\r\n        \"difficulty\": 4,\r\n        \"description\": \"Juicy and flavorful grilled chicken\",\r\n        \"ingredients\": [\r\n            {\r\n                \"name\": \"Chicken\",\r\n                \"category\": \"Meat\",\r\n                \"recipes\": null\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"title\": null,\r\n        \"difficulty\": null,\r\n        \"description\": null,\r\n        \"ingredients\": []\r\n    }\r\n]"
+						}
+					]
+				},
+				{
+					"name": "create new recipe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "create new recipe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"New Recipe\",\r\n    \"difficulty\": 3,\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua\",\r\n    \"ingredients\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/recipes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"recipes"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"title\": \"Spaghetti Bolognese\",\r\n        \"difficulty\": 3,\r\n        \"description\": \"Classic spaghetti with tomato sauce\",\r\n        \"ingredients\": [\r\n            {\r\n                \"name\": \"Tomato\",\r\n                \"category\": \"Produce\",\r\n                \"recipes\": null\r\n            },\r\n            {\r\n                \"name\": \"Onion\",\r\n                \"category\": \"Produce\",\r\n                \"recipes\": null\r\n            },\r\n            {\r\n                \"name\": \"Milk\",\r\n                \"category\": \"Dairy\",\r\n                \"recipes\": null\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"title\": \"Grilled Cheese\",\r\n        \"difficulty\": 2,\r\n        \"description\": \"Simple and delicious grilled cheese sandwich\",\r\n        \"ingredients\": [\r\n            {\r\n                \"name\": \"Cheese\",\r\n                \"category\": \"Dairy\",\r\n                \"recipes\": null\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"title\": \"Grilled Chicken Breast\",\r\n        \"difficulty\": 4,\r\n        \"description\": \"Juicy and flavorful grilled chicken\",\r\n        \"ingredients\": [\r\n            {\r\n                \"name\": \"Chicken\",\r\n                \"category\": \"Meat\",\r\n                \"recipes\": null\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"title\": null,\r\n        \"difficulty\": null,\r\n        \"description\": null,\r\n        \"ingredients\": []\r\n    }\r\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ingredients",
+			"item": [
+				{
+					"name": "get all ingredients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ingredients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all ingredients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/ingredients",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"ingredients"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\r\n    {\r\n        \"name\": \"Tomato\",\r\n        \"category\": \"Produce\",\r\n        \"recipes\": null\r\n    },\r\n    {\r\n        \"name\": \"Onion\",\r\n        \"category\": \"Produce\",\r\n        \"recipes\": null\r\n    },\r\n    {\r\n        \"name\": \"Milk\",\r\n        \"category\": \"Dairy\",\r\n        \"recipes\": null\r\n    },\r\n    {\r\n        \"name\": \"Cheese\",\r\n        \"category\": \"Dairy\",\r\n        \"recipes\": null\r\n    },\r\n    {\r\n        \"name\": \"Chicken\",\r\n        \"category\": \"Meat\",\r\n        \"recipes\": null\r\n    },\r\n    {\r\n        \"name\": \"Beef\",\r\n        \"category\": \"Meat\",\r\n        \"recipes\": null\r\n    }\r\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
